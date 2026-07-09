@@ -163,7 +163,7 @@ function App() {
 
                 <div className="dashboard-header">
                     <div>
-                        <div className="dashboard-header-eyebrow">Blackcoffer Intelligence</div>
+                        <div className="dashboard-header-eyebrow">DataLens Intelligence</div>
                         <h2>Analytics Dashboard</h2>
                         <p>
                             Exploring {data.length.toLocaleString()} insights

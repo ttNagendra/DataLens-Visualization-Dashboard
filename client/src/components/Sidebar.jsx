@@ -16,7 +16,7 @@ function Sidebar({ filterOptions, filters, onFilterChange, onClear, activeCount,
             <div className="sidebar-header">
                 <div className="sidebar-logo">
                     <div className="logo-icon">B</div>
-                    {!collapsed && <h1>Blackcoffer</h1>}
+                    {!collapsed && <h1>DataLens</h1>}
                 </div>
                 {!collapsed && <p className="sidebar-subtitle">Dashboard Filters</p>}
                 <button className="sidebar-collapse-btn" onClick={onToggle} title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}>

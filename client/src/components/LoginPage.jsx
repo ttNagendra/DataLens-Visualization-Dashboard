@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const DEMO_EMAIL = 'demo@blackcoffer.com';
+const DEMO_EMAIL = 'demo@datalens.com';
 const DEMO_PASSWORD = 'demo123';
 const DEMO_NAME = 'Demo User';
 
@@ -70,8 +70,9 @@ function LoginPage({ onLogin, onSwitchToSignup }) {
                         </div>
                         <div className="auth-brand">
                             <div className="auth-brand-icon">B</div>
-                            <h1>Blackcoffer</h1>
+                            <h1>DataLens</h1>
                         </div>
+
                         <p className="auth-tagline">Data Visualization Dashboard</p>
                         <p className="auth-desc">High-impact consulting insights powered by advanced analytics, interactive charts, and real-time data exploration.</p>
 
