@@ -58,10 +58,10 @@ function SignupPage({ onSignup, onSwitchToLogin }) {
                         </div>
                         <div className="auth-brand">
                             <div className="auth-brand-icon">B</div>
-                            <h1>Blackcoffer</h1>
+                            <h1>DataLens</h1>
                         </div>
-                        <p className="auth-tagline">Blackcoffer Data Visualization Dashboard</p>
-                        <p className="auth-desc">Join Blackcoffer to explore 1000+ global insights with powerful analytics, interactive charts, and real-time filtering.</p>
+                        <p className="auth-tagline">DataLens Visualization Dashboard</p>
+                        <p className="auth-desc">Join DataLens to explore 1000+ global insights with powerful analytics, interactive charts, and real-time filtering.</p>
                     </div>
                 </div>
                 <div className="auth-right">

@@ -1,5 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+
+// In production, VITE_API_URL is your Render backend URL.
+// In dev, it's empty so the Vite proxy handles /api/* calls.
+if (import.meta.env.VITE_API_URL) {
+    axios.defaults.baseURL = import.meta.env.VITE_API_URL;
+}
+
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
 import Sidebar from './components/Sidebar';
@@ -104,7 +111,7 @@ function App() {
         return (
             <div className="loading-container">
                 <div className="loading-spinner"></div>
-                <p className="loading-text">Loading dashboard...</p>
+                <p className="loading-text">Loading dashboard data...</p>
             </div>
         );
     }
@@ -156,11 +163,16 @@ function App() {
 
                 <div className="dashboard-header">
                     <div>
+                        <div className="dashboard-header-eyebrow">Blackcoffer Intelligence</div>
                         <h2>Analytics Dashboard</h2>
                         <p>
                             Exploring {data.length.toLocaleString()} insights
                             {activeFilterCount > 0 && ` · ${activeFilterCount} filter${activeFilterCount > 1 ? 's' : ''} active`}
                         </p>
+                    </div>
+                    <div className="dashboard-live-badge">
+                        <span className="live-dot"></span>
+                        Live Data
                     </div>
                 </div>
 

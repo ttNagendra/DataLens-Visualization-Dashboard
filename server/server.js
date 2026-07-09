@@ -1,3 +1,12 @@
+const dns = require('dns');
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4']);
+  console.log("DNS set to Google DNS.");
+} catch (e) {
+  console.log("Failed to set DNS servers:", e.message);
+}
+
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -8,8 +17,12 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/dashboard';
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: process.env.CLIENT_URL || '*',
+    credentials: true,
+}));
 app.use(express.json());
+
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI)
