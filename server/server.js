@@ -25,9 +25,13 @@ app.use(express.json());
 
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI)
+mongoose.connect(MONGO_URI, {
+    serverSelectionTimeoutMS: 30000,
+    socketTimeoutMS: 45000,
+})
     .then(() => console.log('MongoDB connected successfully'))
     .catch(err => console.error('MongoDB connection error:', err));
+
 
 // ─── GET /api/data ── Fetch data with optional filters ───────────────────────
 app.get('/api/data', async (req, res) => {
